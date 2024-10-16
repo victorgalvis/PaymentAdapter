@@ -1,11 +1,11 @@
 # Patrón Adapter (Adaptador) 
 
-Caso:
+**Caso:**
 En una empresa de tecnología se usa una aplicación de comercio electrónico que integra varios métodos de pago, como tarjetas de débito, tarjetas de crédito y PayPal, se ha decidido implementar un sistema que permita manejar las transacciones de forma unificada. Cada método de pago tiene su propia API, lo que genera la necesidad de adaptarlas para que trabajen juntas sin problemas.
 
 
 # payment 
-**Implementación en Python: 
+**Implementación en Python:** 
 
 
 1. Definir las Interfaces de los Métodos de Pago:
@@ -26,9 +26,9 @@ credit_card_adapter = CreditCardAdapter(credit_card_payment)
 debit_card_adapter = DebitCardAdapter(debit_card_payment)
 paypal_adapter = PayPalAdapter(paypal_payment)
 
-[!NOTE]
-print(credit_card_adapter.process_payment("1234-5678-9012-3456", 100000))
-print(debit_card_adapter.process_payment("9876-5432-1098-7654", 50000))
-print(paypal_adapter.process_payment("victorgalvis@yopmail.com", 75000))
+> [!NOTE]
+>print(credit_card_adapter.process_payment("1234-5678-9012-3456", 100000))
+>print(debit_card_adapter.process_payment("9876-5432-1098-7654", 50000))
+>print(paypal_adapter.process_payment("victorgalvis@yopmail.com", 75000))
 
 
