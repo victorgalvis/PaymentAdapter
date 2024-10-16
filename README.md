@@ -16,14 +16,23 @@ Los adaptadores (CreditCardAdapter, DebitCardAdapter y PayPalAdapter) implementa
 
 3. Uso:
 **Create instances of payment methods**
-credit_card_payment = CreditCardPayment()
-debit_card_payment = DebitCardPayment()
-paypal_payment = PayPalPayment()
+
+> [!NOTE]
+>
+> credit_card_payment = CreditCardPayment()
+> debit_card_payment = DebitCardPayment()
+> paypal_payment = PayPalPayment()
+> 
 
 **Create adapters for each payment method**
-credit_card_adapter = CreditCardAdapter(credit_card_payment)
-debit_card_adapter = DebitCardAdapter(debit_card_payment)
-paypal_adapter = PayPalAdapter(paypal_payment)
+
+> [!NOTE]
+>
+> credit_card_adapter = CreditCardAdapter(credit_card_payment)
+> debit_card_adapter = DebitCardAdapter(debit_card_payment)
+> paypal_adapter = PayPalAdapter(paypal_payment)
+> 
+
 
 > [!TIP]
 > **Using adapters to make payments**
