@@ -14,7 +14,7 @@ Se definen interfaces para cada tipo de pago (tarjetas de crédito, débito y Pa
 2. Crear el Adaptador Unificado:
 Los adaptadores (CreditCardAdapter, DebitCardAdapter y PayPalAdapter) implementan una interfaz común (**PaymentAdapter**) para unificar la forma en que se manejan los pagos
 
-3.Uso:
+3. Uso:
 **Create instances of payment methods**
 credit_card_payment = CreditCardPayment()
 debit_card_payment = DebitCardPayment()
@@ -27,6 +27,7 @@ paypal_adapter = PayPalAdapter(paypal_payment)
 
 > [!TIP]
 > **Using adapters to make payments**
+> 
 >print(credit_card_adapter.process_payment("1234-5678-9012-3456", 100000))
 >print(debit_card_adapter.process_payment("9876-5432-1098-7654", 50000))
 >print(paypal_adapter.process_payment("victorgalvis@yopmail.com", 75000))
