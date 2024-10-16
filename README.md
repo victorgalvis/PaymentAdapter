@@ -26,6 +26,7 @@ debit_card_adapter = DebitCardAdapter(debit_card_payment)
 paypal_adapter = PayPalAdapter(paypal_payment)
 
 > [!TIP]
+> **Using adapters to make payments**
 >print(credit_card_adapter.process_payment("1234-5678-9012-3456", 100000))
 >print(debit_card_adapter.process_payment("9876-5432-1098-7654", 50000))
 >print(paypal_adapter.process_payment("victorgalvis@yopmail.com", 75000))
