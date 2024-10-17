@@ -14,7 +14,7 @@ Se definen interfaces PaymentAdapter
 2. Se crean clases Adaptable: 
 Las clases (CreditCardPayment, DebitCardPayment, PayPalPayment)
 
-3. Se crean clases Adaptable:
+3. Se crean Adaptadores:
 adaptadores (CreditCardAdapter, DebitCardAdapter, PayPalAdapter)
 
 4. Cliente: ECommerceApp
