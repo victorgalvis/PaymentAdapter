@@ -8,34 +8,46 @@ En una empresa de tecnología se usa una aplicación de comercio electrónico qu
 **Implementación en Python:** 
 
 
-1. Definir las Interfaces de los Métodos de Pago:
-Se definen interfaces para cada tipo de pago (tarjetas de crédito, débito y PayPal)
+1. Creación de Interfaces específicas:
+Se definen interfaces PaymentAdapter
 
-2. Crear el Adaptador Unificado:
-Los adaptadores (CreditCardAdapter, DebitCardAdapter y PayPalAdapter) implementan una interfaz común (**PaymentAdapter**) para unificar la forma en que se manejan los pagos
+2. Se crean clases Adaptable: 
+Las clases (CreditCardPayment, DebitCardPayment, PayPalPayment)
 
-3. Uso:
+3. Se crean clases Adaptable:
+adaptadores (CreditCardAdapter, DebitCardAdapter, PayPalAdapter)
+
+4. Cliente: ECommerceApp
+
+5. Uso:
 
 > [!NOTE]
->**Create instances of payment methods**
->credit_card_payment = CreditCardPayment()
->debit_card_payment = DebitCardPayment()
->paypal_payment = PayPalPayment()
+>**Instanciar los adaptables**
+>tarjeta_credito = CreditCardPayment()
+>tarjeta_debito = DebitCardPayment()
+>paypal = PayPalPayment()
 > 
 
 > [!NOTE]
->**Create adapters for each payment method**
->credit_card_adapter = CreditCardAdapter(credit_card_payment)
->debit_card_adapter = DebitCardAdapter(debit_card_payment)
->paypal_adapter = PayPalAdapter(paypal_payment)
+>**Instanciar los adaptadores**
+>adapter_credito = CreditCardAdapter(tarjeta_credito)
+>adapter_debito = DebitCardAdapter(tarjeta_debito)
+>adapter_paypal = PayPalAdapter(paypal)
 > 
 
 
 > [!TIP]
->**Using adapters to make payments**
+>**Cliente ECommerceApp: **
 > 
->print(credit_card_adapter.process_payment("1234-5678-9012-3456", 100000))
->print(debit_card_adapter.process_payment("9876-5432-1098-7654", 50000))
->print(paypal_adapter.process_payment("victorgalvis@yopmail.com", 75000))
+>ecommerce_app = ECommerceApp(adapter_credito)
+>ecommerce_app.realizar_pago(100000)  
+>
+>ecommerce_app = ECommerceApp(adapter_debito)
+>ecommerce_app.realizar_pago(50000)  
+>
+>ecommerce_app = ECommerceApp(adapter_paypal)
+>ecommerce_app.realizar_pago(15000)
+> 
+
 
 
